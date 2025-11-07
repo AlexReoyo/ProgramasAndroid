@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Criptografía"
+        app:layout_constraintBottom_toTopOf="@id/tvPedirFrase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPedirFrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Introduce el texto que quieres encriptar"
+        app:layout_constraintBottom_toTopOf="@id/etFrase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo" />
+
+    <EditText
+        android:id="@+id/etFrase"
+        android:layout_marginHorizontal="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@id/buParImpar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPedirFrase"
+         />
+
+    <Button
+        android:onClick="ParImpar"
+        android:id="@+id/buParImpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encriptado\n PAR/IMPAR"
+        app:layout_constraintBottom_toTopOf="@id/tvPedirN"
+        app:layout_constraintEnd_toStartOf="@id/buCesarUno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFrase"
+        android:backgroundTint="#4CAF50"
+         />
+
+    <Button
+        android:onClick="Cesar1"
+        android:id="@+id/buCesarUno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encriptado\n Cesar 1"
+        app:layout_constraintBottom_toTopOf="@id/tvPedirN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buParImpar"
+        app:layout_constraintTop_toBottomOf="@id/etFrase"
+        android:backgroundTint="#4CAF50"
+        />
+
+    <TextView
+        android:id="@+id/tvPedirN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Introduce el N para el encriptado Cesar N"
+        app:layout_constraintBottom_toTopOf="@id/etN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buCesarUno" />
+
+    <EditText
+        android:id="@+id/etN"
+        android:layout_marginHorizontal="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@id/tvPedirClave"
+        app:layout_constraintEnd_toStartOf="@id/buCesarN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPedirN"
+        />
+
+    <Button
+        android:onClick="CesarN"
+        android:id="@+id/buCesarN"
+        android:layout_marginRight="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encriptado\n Cesar N"
+        app:layout_constraintBottom_toTopOf="@id/tvPedirClave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/etN"
+        app:layout_constraintTop_toBottomOf="@id/tvPedirN"
+        android:backgroundTint="#4CAF50"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tvPedirClave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Introduce la clave múltiple (Ejemplo: 2841)"
+        app:layout_constraintBottom_toTopOf="@id/etClave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etN" />
+
+    <EditText
+        android:id="@+id/etClave"
+        android:layout_marginHorizontal="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@id/tvResultado"
+        app:layout_constraintEnd_toStartOf="@id/buCesarClave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPedirClave"
+        />
+
+    <Button
+        android:onClick="CesarClave"
+        android:layout_marginRight="25dp"
+        android:id="@+id/buCesarClave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encriptado \nCesar Múltiple"
+        app:layout_constraintBottom_toTopOf="@id/tvTextoEncriptado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/etClave"
+        app:layout_constraintTop_toBottomOf="@id/tvPedirClave"
+        android:backgroundTint="#4CAF50"
+        />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvTextoEncriptado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etClave"
+        android:layout_marginHorizontal="25dp"
+        />
+
+    <TextView
+        android:id="@+id/tvTextoEncriptado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="--------"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvResultado"
+        app:layout_constraintTop_toBottomOf="@id/buCesarClave"
+        android:layout_marginRight="25dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
