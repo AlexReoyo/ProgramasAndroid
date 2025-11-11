@@ -8,12 +8,196 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvTitulo"
+        android:textStyle="bold"
+        android:textSize="35sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Super Encriptador"
+        app:layout_constraintBottom_toTopOf="@id/llBloque2Entrada"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <LinearLayout
+        android:id="@+id/llBloque2Entrada"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="25dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/llBloque3BotonesYSalida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/llBloque2_1EntradaFrase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPedirFrase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Introduce el texto"
+                android:layout_marginBottom="10dp"
+                 />
+
+            <EditText
+                android:id="@+id/etFrase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#232326"
+                android:ems="10"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:text=""
+                android:layout_marginBottom="25dp"
+                android:textColor="@color/white"
+
+
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llBloque2_2EntradaClave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvLlave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Llave"
+                android:layout_marginRight="10dp"
+                />
+
+            <EditText
+                android:id="@+id/etLlave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="9"
+                android:inputType="number"
+                android:text=""
+                android:layout_marginRight="10dp"/>
+
+            <CheckBox
+                android:id="@+id/cbEncriptar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Encriptar"
+                android:layout_marginRight="10dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBloque3BotonesYSalida"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="25dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llBloque2Entrada">
+
+        <LinearLayout
+            android:id="@+id/llBloque3_1Botones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <Button
+            android:onClick="ParImpar"
+            android:id="@+id/buParImpar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P/I"
+            android:backgroundTint="#5BE761"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp"
+            />
+
+        <Button
+            android:onClick="CesarN"
+            android:id="@+id/buCesarN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C+N"
+            android:backgroundTint="#5BE761"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp"
+            />
+
+            <Button
+                android:onClick="CesarClave"
+                android:id="@+id/buCesarC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C+C"
+                android:backgroundTint="#5BE761"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llBloque3_2Salida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:ems="10"
+                android:overScrollMode="always"
+                android:gravity="top|left"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:text=""
+                android:background="#232326"
+                android:layout_marginVertical="20dp"
+                android:textColor="@color/white"
+                />
+
+            <ImageButton
+
+                android:onClick="Copiar"
+                android:layout_gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#009688"
+                app:srcCompat="@drawable/compartir"
+                android:scaleType="fitCenter"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
