@@ -87,7 +87,7 @@
                 android:id="@+id/etLlave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="9"
+                android:ems="5"
                 android:inputType="number"
                 android:text=""
                 android:layout_marginRight="10dp"/>
@@ -96,7 +96,7 @@
                 android:id="@+id/cbEncriptar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Encriptar"
+                android:text="Desencriptar"
                 android:layout_marginRight="10dp"
                 />
 
@@ -166,6 +166,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvFraseEncriptada"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
