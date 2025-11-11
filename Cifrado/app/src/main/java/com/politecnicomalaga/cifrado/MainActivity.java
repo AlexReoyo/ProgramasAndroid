@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-        System.out.println(textoCodificado);TextView tvResultado;
+        TextView tvResultado;
         tvResultado = (TextView) findViewById(R.id.tvTextoEncriptado);
         tvResultado.setText(textoCodificado);
     }
