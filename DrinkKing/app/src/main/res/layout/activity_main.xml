@@ -6,63 +6,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/llEncabezado">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvTitulo"
-        android:text="DrinkKing"
-        app:layout_constraintBottom_toTopOf="@id/tvPedirJugadores"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTitulo"
+            android:text="DrinkKing"
+             />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvPedirJugadores"
-        android:text="Introduce el nombre de los jugadores"
-        app:layout_constraintBottom_toTopOf="@id/llNombres"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        <TextView
+            android:id="@+id/tvPedirJugadores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Introduce el nombre de los jugadores"
+            />
 
-        />
+    </LinearLayout>
+
+
+
+
 
     <LinearLayout
-        android:layout_width="wrap_content"
-
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="25dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
-        android:id="@+id/llNombres">
+        app:layout_constraintTop_toBottomOf="@+id/llEncabezado"
+        android:id="@+id/llNombres"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/llLinea1Nombres"
-            android:orientation="vertical">
-
-
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/llIntroducirDatosLinea1">
+                android:id="@+id/llIntroducirDatosLinea1"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Jugador1:"
-                    android:layout_marginRight="15dp"
-                    />
+
 
                 <EditText
-                    android:id="@+id/editTextText"
+                    android:id="@+id/etJugador1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -72,11 +73,12 @@
                     />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/buMas1Jugador1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#F4950F"
-                    android:text="+1 🍺"/>
+                    android:gravity=""
+                    android:text="+1 🍺" />
 
             </LinearLayout>
 
@@ -104,13 +106,342 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llLinea2Nombres"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llIntroducirDatosLinea2">
+
+
+
+                <EditText
+                    android:id="@+id/etJugador2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text=""
+                    android:layout_marginRight="15dp"
+                    />
+
+                <Button
+                    android:id="@+id/buMas1Jugador2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#F4950F"
+                    android:text="+1 🍺"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/llTotalLinea2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total:"
+                    android:layout_marginRight="15dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/tvTotal2"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llLinea3Nombres"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llIntroducirDatosLinea3">
+
+
+
+                <EditText
+                    android:id="@+id/etJugador3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text=""
+                    android:layout_marginRight="15dp"
+                    />
+
+                <Button
+                    android:id="@+id/buMas1Jugador3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#F4950F"
+                    android:text="+1 🍺"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/llTotalLinea3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total:"
+                    android:layout_marginRight="15dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/tvTotal3"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llLinea4Nombres"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llIntroducirDatosLinea4">
+
+
+
+                <EditText
+                    android:id="@+id/etJugador4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text=""
+                    android:layout_marginRight="15dp"
+                    />
+
+                <Button
+                    android:id="@+id/buMas1Jugador4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#F4950F"
+                    android:text="+1 🍺"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/llTotalLinea4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total:"
+                    android:layout_marginRight="15dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/tvTotal4"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llLinea5Nombres"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llIntroducirDatosLinea5">
+
+
+
+                <EditText
+                    android:id="@+id/etJugador5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text=""
+                    android:layout_marginRight="15dp"
+                    />
+
+                <Button
+                    android:id="@+id/buMas1Jugador5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#F4950F"
+                    android:text="+1 🍺"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/llTotalLinea5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total:"
+                    android:layout_marginRight="15dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/tvTotal5"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llLinea6Nombres"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llIntroducirDatosLinea6">
+
+                <EditText
+                    android:id="@+id/etJugador6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text=""
+                    android:layout_marginRight="15dp"
+                    />
+
+                <Button
+                    android:id="@+id/buMas1Jugador6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#F4950F"
+                    android:text="+1 🍺"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/llTotalLinea6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total:"
+                    android:layout_marginRight="15dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/tvTotal6"/>
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/llRanking">
+        android:id="@+id/llRanking"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llNombres"
+        android:gravity="center"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/llTop1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOP 1🥇"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#FFEB3B"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-----"
+                android:textSize="25sp"
+                android:textColor="#FFEB3B"
+                android:id="@+id/tvTop1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/llTop2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="TOP 2🥈"
+                android:textStyle="bold"
+                android:textColor="#A8A8A8"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-----"
+                android:textColor="#A8A8A8"
+                android:textSize="25sp"
+                android:id="@+id/tvTop2"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/llTop3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOP 3🥉"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#8A5130"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-----"
+                android:textColor="#8A5130"
+                android:textSize="25sp"
+                android:id="@+id/tvTop3"/>
+        </LinearLayout>
 
 
     </LinearLayout>
