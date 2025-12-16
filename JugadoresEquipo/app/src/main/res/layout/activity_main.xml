@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FF9800"
+        android:text="Gestor de equipos"
+        app:layout_constraintBottom_toTopOf="@id/lyAlta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/lyAlta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/lyBaja"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+        android:gravity="center"
+        >
+
+            <TextView
+                android:id="@+id/tvEnunciadoAlta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Para introducir un nuevo jugador rellena los siguientes datos:"
+                 />
+
+            <LinearLayout
+                android:id="@+id/lyNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/tvNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre:"
+                     />
+
+                <EditText
+                    android:id="@+id/etNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:id="@+id/lyApellido1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/tvApellido1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apellido1:"
+                        />
+
+                    <EditText
+                        android:id="@+id/etApellido1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="5"
+                        android:inputType="text"
+                        android:text="" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lyApellido2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/tvApellido2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apellido2:"
+                        />
+
+                    <EditText
+                        android:id="@+id/etApellido2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="5"
+                        android:inputType="text"
+                        android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyDni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/tvDni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DNI:"
+                    />
+
+                <EditText
+                    android:id="@+id/etDni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="9"
+                    android:inputType="text"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lyEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lyTelefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/tvTelefono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Teléfono:"
+                    />
+
+                <EditText
+                    android:id="@+id/etTelefono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="9"
+                    android:inputType="number"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:id="@+id/lyDorsal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/tvDorsal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dorsal:"
+                        />
+
+                    <EditText
+                        android:id="@+id/etDorsal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:inputType="number"
+                        android:text="" />
+                </LinearLayout>
+                <CheckBox
+                    android:id="@+id/cbPortero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Es portero"
+                    />
+            </LinearLayout>
+
+        <Button
+            android:onClick="AltaJugador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dar de alta"
+            android:backgroundTint="#FF5722"
+            />
+        <TextView
+            android:id="@+id/tvResultadoAlta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyBaja"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/lyBusqueda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lyAlta"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/tvEnuciadoBaja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Para dar de baja un jugador, introduce la posición dentro del equipo (0-5)"/>
+        <LinearLayout
+            android:id="@+id/lyPosicion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/tvPosicion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Posición:"
+                />
+
+            <EditText
+                android:id="@+id/etPosicion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text"
+                android:text="" />
+
+            <Button
+                android:onClick="bajaJugador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dar de baja"
+                android:backgroundTint="#FF5722"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvResultadoBaja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lyBusqueda"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lyBaja"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/tvEnuciadoBusqueda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Para mostrar Todos los jugadores existentes pulse en "/>
+        <Button
+            android:onClick="buscarTodos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscar"
+            android:backgroundTint="#FF5722"
+            />
+        <TextView
+            android:id="@+id/tvResultadoBusqueda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
